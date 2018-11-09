@@ -26,6 +26,7 @@ gulp.task("watch", function() {
    
 });
 
+
 /* Minifiera och sätta ihop css-filer */ 
 gulp.task('minify-css', function() {
     return gulp.src('src/css/*.css')
@@ -41,5 +42,5 @@ gulp.task('minify-css', function() {
         .pipe(gulp.dest('pub/images'))
 }); 
 
-gulp.task("default", ["copyhtml", "concominjs", "watcher"]); 
+gulp.task("default", ["copyhtml", "concominjs", "watch", "minify-css"]); 
    
